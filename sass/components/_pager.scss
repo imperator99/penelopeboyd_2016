@@ -1,0 +1,35 @@
+// Pager
+
+.pager {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	li {
+		flex: 0 0 auto;
+		margin: $small-spacing;
+	}
+	a {
+		position: relative;
+		overflow: hidden;
+		&:link,
+		&:visited,
+		&.active,
+		&.active-trail {
+			display: block;
+			background-color: transparent;
+			border-radius: $base-border-radius;
+			transition: all $base-duration $base-timing;
+			padding: $small-spacing;
+			margin: $small-spacing / 2;
+			color: $action-color;
+		}
+		&:hover {
+			background-color: $medium-gray;
+			color: $white;
+			box-shadow: $shadow-hover;
+		}
+		&:active {
+			background-color: $red;
+		}
+	}
+}

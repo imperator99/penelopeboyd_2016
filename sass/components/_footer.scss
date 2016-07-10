@@ -1,0 +1,62 @@
+// Footer
+
+footer {
+	padding: $small-spacing;
+	.l-copyright {
+		text-align: center;
+	}
+	.l-social {
+		.menu {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			li {
+				flex: 0 1 auto;
+				text-align: center;
+				list-style: none;
+				a {
+					position: relative;
+					overflow: hidden;
+					line-height: 1;
+					&:link,
+					&:visited,
+					&.active,
+					&.active-trail {
+						display: block;
+						background-color: transparent;
+						border-radius: $base-border-radius;
+						transition: all $base-duration $base-timing;
+						padding: $small-spacing / 2 $small-spacing;
+						color: $black;
+					}
+					&:hover {
+						background-color: $medium-gray;
+						color: $white;
+						box-shadow: $shadow-hover;
+					}
+					&:active {
+						background-color: $red;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include susy-breakpoint($tablet, $tablet-columns) {
+	footer {
+		.l-copyright {
+			@include span(first ($tablet-columns / $tablet-columns) * ($tablet-columns / 2));
+			padding: $small-spacing / 2 0;
+			text-align: left;
+		}
+		.l-social {
+			@include span(last ($tablet-columns / $tablet-columns) * ($tablet-columns / 2));
+			text-align: right;
+			.menu {
+				justify-content: flex-end;
+			}
+		}
+	}
+}

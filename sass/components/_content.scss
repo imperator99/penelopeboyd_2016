@@ -1,0 +1,18 @@
+// Content
+
+.content-image {
+	width: 100%;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@include susy-breakpoint($tablet, $tablet-columns) {
+	.content-image {
+		@include span(last $tablet-columns / $tablet-columns * $tablet-columns / 2);
+	}
+	.content-text {
+		@include span(first $tablet-columns / $tablet-columns * $tablet-columns / 2);
+	}
+}

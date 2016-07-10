@@ -1,0 +1,59 @@
+// Home
+
+.home-page-box {
+	img {
+		min-width: 100%;
+		height: auto;
+	}
+}
+
+#categories {
+	.view-categories .view-content {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-around;
+		div {
+			flex: 1 1 30%;
+			padding: $small-spacing;
+			margin: $small-spacing;
+			text-align: center;
+			a {
+				box-shadow: $shadow;
+				padding: $small-spacing;
+				display: block;
+				transition: all $base-duration $base-timing;
+				position: relative;
+				overflow: hidden;
+				img {
+					transition: all $base-duration $base-timing;
+					opacity: 0.9;
+					-webkit-backface-visibility: hidden;
+					-webkit-transform: translateZ(0) scale(1.0, 1.0);
+				}
+				&:hover {
+					box-shadow: $shadow-hover;
+					img {
+						opacity: 1;
+					}
+					h2 {
+						color: $dark-gray;
+					}
+				}
+				&:active {
+					background-color: $red;
+				}
+				h2 {
+					font-size: $base-font-size;
+					margin: 0;
+					color: lighten($dark-gray, 20%);
+				}
+			}
+		}
+	}
+}
+
+#about,
+#contact {
+	padding: $small-spacing;
+}

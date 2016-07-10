@@ -1,0 +1,41 @@
+// Works
+
+#works {
+	h1 {
+		text-align: center;
+		font-size: $base-font-size * 1.8;
+	}
+	.view-content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		.category-item {
+			flex: 0 0 50%;
+			padding: $small-spacing;
+			text-align: center;
+			h2 {
+				font-size: $base-font-size * 0.6;
+			}
+		}
+	}
+}
+
+#colorbox {
+	#cboxLoadedContent {
+		display: table;
+		> div {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+}
+
+@include susy-breakpoint($tablet, $tablet-columns) {
+	#works {
+		.view-content {
+			.category-item {
+				flex-basis: 33%;
+			}
+		}
+	}
+}
