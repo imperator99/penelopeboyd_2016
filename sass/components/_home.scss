@@ -14,7 +14,10 @@
 		align-items: flex-start;
 		justify-content: center;
 		div {
-			flex: 0 auto;
+			flex: 0 1 auto;
+			@include susy-breakpoint($desktop, $desktop-columns) {
+				flex: 1 1 0px;
+			}
 			padding: $small-spacing;
 			margin: $small-spacing;
 			text-align: center;

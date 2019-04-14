@@ -5,9 +5,11 @@
     "sass:dev": "./node_modules/.bin/gulp",
     "sass:prod": "./node_modules/.bin/gulp sass:prod"
   },
-  "dependencies": {},
+  "dependencies": {
+    "npm": "^6.9.0"
+  },
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.5.2",
